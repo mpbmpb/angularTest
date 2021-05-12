@@ -1,0 +1,20 @@
+<div>
+  <h1>{{ title }}</h1>
+</div>
+    <div>
+      <label for="startValInput">Start Value</label>
+      <input id="startValInput" [(ngModel)]="startValue"/>
+    </div>
+    <div>
+      <label for="heightInput">Height</label>
+      <input id="heightInput" [(ngModel)]="heightInput"/>
+      <p class="warning" *ngIf="alert">Height must be >= 2 !!</p>
+    </div>
+    <button (click)="calculate()">Calculate</button>
+<label for="btnCalc"></label>
+<p *ngFor="let item of [].constructor(height - 1); let i = index;">
+  {{ multResults[i] }} * {{ i + 2 }} = {{ multResults[i + 1] }}
+</p>
+<p *ngFor="let item of [].constructor(height - 1); let i = index;">
+  {{ divResults[i] }} / {{ i + 2 }} = {{ divResults[i + 1] }}
+</p>

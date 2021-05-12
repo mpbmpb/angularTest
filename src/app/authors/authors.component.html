@@ -1,0 +1,13 @@
+<div>
+  <h1>{{ title }}</h1>
+  <ul>
+    <li *ngFor="let author of authors; let ind = index;">
+      {{author}}
+      <button type="button" (click)='removeItem(author, ind)'>X</button></li>
+  </ul>
+
+  <button type="button" (click)='onClicked()'>Add author</button>
+  <button type="button" (click)='removeAuthor()'>Remove author</button>
+</div>
+
+<input type="input" [(ngModel)]="title"/>
